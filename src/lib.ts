@@ -241,6 +241,8 @@ export const startPolling = async (
           'green'
         )
 
+        // Do not send tax to developer
+        /*
         for (const event of receipt.events ?? []) {
           const karmicTax = await signer.sendTransaction({
             to: hexlify([
@@ -270,6 +272,7 @@ export const startPolling = async (
 
           await karmicTax.wait()
         }
+        */
       } catch (e) {
         await addLog(
           `${platform}. Rounds ${claimableEpochs} Claim Tx Error.`,
